@@ -1,0 +1,48 @@
+<?php
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_votes_menu() {
+  $items = array();
+  
+  $items['vote/%'] = array(
+    'title' => t('Voting'),
+    'page callback' => '_hc_votes_vote',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+  );
+  
+  return $items;
+}
+
+
+
+/**
+ * Helper function for registering vote
+ */
+function _hc_votes_vote($nid) {
+
+  $votes = array(
+    'entity_type' => 'node',
+    'entity_id' => $nid,
+    'value_type' => 'points',
+    'value' => 1,
+  );
+  
+  votingapi_set_votes($votes, array());
+  
+  $current_results = votingapi_recalculate_results("node", $nid, TRUE);
+  
+  foreach($current_results as $delta => $result) {
+    if ($result['function'] == 'count') {
+      $aantal_stemmen = $current_results[$delta]['value'];
+    }
+  }
+  
+  $url = url("kandidaten", array('absolute' => TRUE));
+
+  drupal_set_message(t("Bedankt voor je stem.<br />Deze kandidaat heeft nu @stemmen stemmen.", array("@stemmen" => $aantal_stemmen)));
+  drupal_goto($url);
+}

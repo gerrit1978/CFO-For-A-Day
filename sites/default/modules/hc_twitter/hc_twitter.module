@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * @file
+ * Module file for Twitter module
+ *
+ * This module provides a block containing
+ * tweets with a certain hashtag
+ *
+ */
+
+
+/**
+ * Implements hook_block_info
+ */
+function hc_twitter_block_info() {
+  $blocks = array();
+  
+  $blocks['hc_twitter'] = array(
+    'info' => t('Twitter block'),
+  );
+  
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view
+ */
+function hc_twitter_block_view($delta = "") {
+  $block = array();
+  
+  switch ($delta) {
+    case 'hc_twitter':
+      $block['subject'] = 'Tweets';
+      $block['content'] = hc_twitter_block_hc_twitter_render();
+      break;
+  }
+  
+  return $block;
+}
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_twitter_menu() {
+  $items = array();
+  
+  $items['admin/config/services/hc_twitter'] = array(
+    'title' => 'Twitter Hashtag',
+    'description' => t('Configure the Twitter hashtag to be shown in the Twitter block.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('hc_twitter_admin_form'),
+    'file' => 'hc_twitter.admin.inc',
+    'access arguments' => array('administer twitter hashtag'),
+  );
+  
+  return $items;
+}
+
+
+/**
+ * Implements hook_permission
+ */
+function hc_twitter_permission() {
+  return array(
+    'administer twitter hashtag' => array(
+      'title' => t('Administer the Twitter hashtag'),
+      'description' => t('Perform administration tasks for the Twitter block.'),
+    ),
+  );
+}
+
+
+/**
+ * Render Twitter block
+ */
+function hc_twitter_block_hc_twitter_render() {
+
+  $hashtag = variable_get('hc_twitter_hashtag');
+  $url = "http://search.twitter.com/search.json?q=%23" . $hashtag;
+  $string = file_get_contents($url);
+  $result = json_decode($string);
+
+  $results = $result->results;
+  $tweets = array();
+  if (is_array($results)) {
+    for ($i = 0; $i < variable_get('hc_twitter_number', 2); $i++) {
+      $text = $results[$i]->text;
+      $user = $results[$i]->from_user;
+      $tweets[] = array('text' => $text, 'user' => $user);
+    }
+  }
+  
+  // contruct final item array
+  $items = array();
+
+	foreach ($tweets as $tweet) {
+	  $items[] = array('data' => $tweet['text'] . " (" . $tweet['user'] . ")");
+	}
+  
+	$output = theme('item_list', array('items' => $items));
+	
+	return $output;
+}

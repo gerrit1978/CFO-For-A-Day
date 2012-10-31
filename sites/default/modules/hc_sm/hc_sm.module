@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Implements hook_init
+ */
+function hc_sm_init() {
+  $path = drupal_get_path('module', 'hc_sm');
+	drupal_add_css($path . "/hc_sm.css");
+}
+
+
 
 /**
  * Implements hook_block_info

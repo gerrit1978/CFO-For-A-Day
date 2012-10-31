@@ -1,0 +1,22 @@
+#block-hc-sm-hc-sm .label {
+  float: left;
+  margin-right: 15px;
+  font-weight: bolder;
+}
+
+#block-hc-sm-hc-sm .content {
+  float: right;
+  margin-bottom: 10px;
+}
+
+#block-hc-sm-hc-sm .widget {
+  display: inline-block;
+  zoom:1; /* IE 7 Hack starts here*/
+	 *display:inline;
+  max-width: 75px;
+  margin-right: 15px;
+}
+
+#block-hc-sm-hc-sm .widget.last {
+  margin-right: 0;
+}

@@ -19,10 +19,59 @@ body {
 }
 
 /** Zones **/
+#zone-footer-wrapper {
+  height: 257px;
+  background: url(../img/bg-footer.jpg) repeat-x;
+  color: #92949b;
+}
+
+#zone-footer {
+  padding-top: 40px;
+}
 
 /** Regions **/
 #region-menu {
   height: 75px;
+}
+
+
+/** Blocks **/
+#region-content .block h2.block-title {
+	text-align: center;
+	font-size: 3.077em;
+	color: #2b2e35;
+	font-family: "Ubuntu Condensed";
+	font-weight: 300;
+	text-transform: uppercase;
+	border-top: 1px solid #cdcac3; 
+	margin: 40px 0 0 0;
+}
+
+#region-content .block h2.block-title span {
+	position: relative; 
+	top: -31px; 
+	padding: 0 20px; 
+	background: #f4f1e9;
+}
+
+
+/** Page Title **/
+#region-content h1#page-title {
+	text-align: center;
+	font-size: 3.077em;
+	color: #2b2e35;
+	font-family: "Ubuntu Condensed";
+	font-weight: 300;
+	text-transform: uppercase;
+	border-top: 1px solid #cdcac3; 
+	margin: 40px 0 0 0;
+}
+
+#region-content h1#page-title span {
+	position: relative; 
+	top: -31px; 
+	padding: 0 20px; 
+	background: #f4f1e9;
 }
 
 

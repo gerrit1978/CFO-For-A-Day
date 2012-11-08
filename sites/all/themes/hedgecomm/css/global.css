@@ -1,6 +1,11 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 
+/** HTML elements **/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu Condensed";
+}
+
 
 /** General Styles **/
 body {
@@ -179,4 +184,44 @@ body {
 
 #region-branding .block-carrousel-block ul li .slogan span {
   color: #d29f50;
+}
+
+
+/** Homepage Event block **/
+#block-block-1 .col1 {
+  background: #e0dacc;
+  border-right: 1px solid white;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  margin: 0;
+}
+
+#block-block-1 .col2 {
+  background: #e8e2d3;
+  margin: 0;
+}
+
+
+/** Homepage Companies **/
+.view-companies ul {
+  margin: 0; 
+  padding: 0;
+}
+
+.view-companies ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  height: 160px;
+  background: #e0dacc;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.view-companies ul li .logo {
+  margin-top: 10px;
+  margin-left: 10px;
 }

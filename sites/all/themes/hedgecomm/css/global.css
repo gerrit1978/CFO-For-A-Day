@@ -154,7 +154,7 @@ body {
 
 /** Homepage Carrousel **/
 #region-branding .block-carrousel-block {
-  border: 6px solid #e7e2d2;
+  border: 5px solid #e7e2d2;
   margin-bottom: -20px;
   box-shadow: 0 0 20px #222;
 }
@@ -188,6 +188,10 @@ body {
 
 
 /** Homepage Event block **/
+#block-block-1 {
+  margin: 0 5px;
+}
+
 #block-block-1 .col1 {
   background: #e0dacc;
   border-right: 1px solid white;
@@ -195,11 +199,28 @@ body {
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
   margin: 0;
+  width: 56%;
+  float: left;
+}
+
+#block-block-1 .col1 h3 {
+  padding-top: 10px;
+  min-height: 84px;
+  background: url(../img/bg-event-block-left.jpg) repeat-x;
+  text-align: center;
+  color: #d29f4f;
+  text-transform: uppercase;
+}
+
+#block-block-1 .col1 h3 span {
+  color: #ffffff;
 }
 
 #block-block-1 .col2 {
   background: #e8e2d3;
   margin: 0;
+  width: 44%;
+  float: left;
 }
 
 

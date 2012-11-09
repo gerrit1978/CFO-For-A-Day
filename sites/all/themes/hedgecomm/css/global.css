@@ -330,6 +330,68 @@ body {
   height: 283px;
 }
 
+#block-views-testimonials-block ul li {
+  padding-top: 30px;
+  margin: 0 25px;
+}
+
+#block-views-testimonials-block .left{
+  float: left;
+}
+
+#block-views-testimonials-block .left {
+  margin-right: 20px;
+  position: relative;
+}
+
+#block-views-testimonials-block .image {
+  border: 9px solid #2c2f36;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */  
+}
+
+#block-views-testimonials-block .name {
+  position: absolute;
+  bottom: 22px;
+  left: 9px;
+  padding: 2px 5px;
+  background: url(../img/bg-black-transp.png);
+}
+
+#block-views-testimonials-block .name a {
+  color: white;
+  text-decoration: none;
+}
+
+#block-views-testimonials-block .right {
+  width: 550px;
+  float: left;
+}
+
+#block-views-testimonials-block .right .bottom-right {
+  text-align: center;
+  padding-top: 40px;
+}
+
+#block-views-testimonials-block .right .bottom-right a {
+  text-decoration: none;
+  color: #2b2e35;
+  background: #a59f92;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0 0 10px #888;
+  padding: 10px 80px;
+  font-size: 1.615em;
+  display: inline-block;
+}
+
+#block-views-testimonials-block .right .bottom-right a span {
+  color: white;
+  font-size: 0.810em;
+}
+
 /** Homepage Companies **/
 #block-views-companies-block-1 {
   margin-top: 100px;

@@ -1,0 +1,139 @@
+<?php
+
+/**
+ * Implements hook_theme
+ *
+ * see http://grayside.org/2010/09/how-override-views-field-template-module for details concerning hook_theme and theme functions
+ */
+function hc_testimonial_theme($existing, $type, $theme, $path) {
+  return array(
+    'views_view_field__testimonials__nothing' => array( 
+        'arguments' => array('view' => FALSE, 'field' => FALSE, 'row' => FALSE),
+        'original hook' => 'views_view_field',
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_api
+ */
+function hc_testimonial_views_api() {
+  return array(
+    'api' => 3,
+  );
+}
+
+
+/**
+ * Theme function for formatting the testimonial on homepage
+ *
+ * Things we need:
+ * - movie or image
+ * - name = title
+ * - description
+ * - custom text
+ */
+function theme_views_view_field__testimonials__nothing(&$vars) {
+
+	if (!isset($vars['row']->nid)) {
+	  return;
+	}
+	
+	$node_wrapper = entity_metadata_wrapper('node', $vars['row']->nid);
+
+	// title = name
+	$name = $node_wrapper->title->value();
+	$link = l($name, 'node/' . $vars['row']->nid);
+	
+	// film of afbeelding?
+	$filmpje_of_afbeelding = $node_wrapper->field_filmpje_of_afbeelding->value();
+
+	if ($filmpje_of_afbeelding == 'film') {
+		$field_film = $node_wrapper->field_cfo_filmpje->value();
+		$film_url = file_create_url($field_film['uri']);
+
+		$file_mp4['uri'] = $field_film['uri'];
+		$file_mp4['filename'] ='Filmpje';
+		$file_mp4['filemime'] = 'video/mp4';
+		
+		$items['mp4'] = $file_mp4;
+		$attributes['width'] = 285;
+		$attributes['height'] = 210;
+		
+		$output_image_film = theme('videojs', array('items' => $items, 'player_id' => 'videojs-header', 'attributes' => $attributes));
+	}
+
+	if ($filmpje_of_afbeelding == 'afbeelding') {
+	  $field_afbeelding = $node_wrapper->field_cfo_afbeelding->value();
+	  $image_url = image_style_url('homepage_testimonial', $field_afbeelding['uri']);
+	  $variables = array('path' => $image_url);
+	  $output_image_film = theme('image', $variables);
+	}
+
+	// description
+	$description = $node_wrapper->field_cfo_beschrijving->value();
+	$description_value = $description['value'];
+	$description_format = $description['format'];
+	
+	$alter = array('max_length' => 250, 'ellipsis' => TRUE);
+	
+	$description_output = views_trim_text($alter, check_markup($description_value, $description_format));
+
+	// TODO: custom text vertalen!
+
+	$output = '<div class="left">'
+	  . '<div class="image">'
+	  . $output_image_film
+	  . '</div> <!-- image -->'
+	  . '<div class="name">'
+	  . $link
+	  . '</div> <!-- name -->'
+	  . '</div> <!-- left -->'
+	  . '<div class="right">'
+	  . '<div class="top-right">'
+	  . $description_output
+	  . '</div> <!-- top-right -->'
+	  . '<div class="bottom-right">'
+	  . '<a href="inschrijven">Heeft deze CFO jou overtuigd?<br />'
+	  . '<span>Schrijf je in, upload je cv</span></a> '
+	  . '</div> <!-- bottom-right -->'
+	  . '</div> <!-- right -->';
+	
+	return $output;
+/*
+	$product_id = $vars['row']->entity;
+  $product = commerce_product_load($product_id);
+ 
+  if ($product) {
+	  // check for associated product display nodes for path
+	  $product_display_url = _hc_catalog_get_product_display_url($product->title, $product_id);
+  }
+
+	return $product_display_url;
+*/
+
+  return "Hier se";
+
+}
+
+
+/*
+<div class="left">
+<div class="image">
+[field_cfo_afbeelding]
+</div> <!-- image -->
+<div class="name">
+[title]
+</div> <!-- name -->
+</div> <!-- left -->
+
+<div class="right">
+<div class="top-right">
+[field_cfo_beschrijving]
+</div> <!-- top-right -->
+<div class="bottom-right">
+<a href="inschrijven">Heeft deze CFO jou overtuigd?<br />
+<span>Schrijf je in, upload je cv</span></a> 
+</div> <!-- bottom-right -->
+</div> <!-- right -->
+*/

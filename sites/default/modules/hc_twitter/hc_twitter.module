@@ -78,6 +78,9 @@ function hc_twitter_permission() {
  */
 function hc_twitter_block_hc_twitter_render() {
 
+	$path = drupal_get_path('module', 'hc_twitter');
+	$image_path = $path . "/twitter.png";
+
   $hashtag = variable_get('hc_twitter_hashtag');
   $url = "http://search.twitter.com/search.json?q=%23" . $hashtag;
   $string = file_get_contents($url);
@@ -100,7 +103,9 @@ function hc_twitter_block_hc_twitter_render() {
 	  $items[] = array('data' => $tweet['text'] . " (" . $tweet['user'] . ")");
 	}
   
-	$output = theme('item_list', array('items' => $items));
+  $output = "<div class='bg'>" . theme('image', array('path' => $image_path)) . "</div>";
+  
+	$output .= theme('item_list', array('items' => $items));
 	
 	return $output;
 }

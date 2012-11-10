@@ -369,6 +369,8 @@ body {
 }
 
 #block-views-testimonials-block .image {
+  width: 303px;
+  height: 228px;
   border: 9px solid #2c2f36;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box; /* Firefox */
@@ -457,4 +459,28 @@ body {
 .view-companies ul li .logo {
   margin-top: 10px;
   margin-left: 10px;
+}
+
+
+/** Footer blocks **/
+#zone-footer .block-title {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #92939b;
+  font-size: 1.923em;
+}
+
+#zone-footer #block-hc-twitter-hc-twitter {
+  position: relative;
+}
+
+#zone-footer #block-hc-twitter-hc-twitter .bg {
+  position: absolute;
+  top: 10px;
+  left: -70px;
+}
+
+
+#zone-footer #block-views-sponsors-block, #zone-footer #block-views-sponsors-block ul {
+  text-align: right;
 }

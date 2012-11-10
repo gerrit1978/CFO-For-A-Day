@@ -192,6 +192,10 @@ body {
   margin: 0 5px;
 }
 
+#block-block-1 .content {
+  position: relative;
+}
+
 #block-block-1 h4 {
   margin-bottom: 10px;
   font-weight: 300;
@@ -214,7 +218,7 @@ body {
   margin: 0;
   width: 56%;
   float: left;
-  min-height: 350px;
+  height: 350px;
 }
 
 #block-block-1 .col1 h3 {
@@ -270,8 +274,10 @@ body {
   margin: 0;
   width: 44%;
   float: left;
-  min-height: 350px;  
+  height: 350px;  
   color: #737371;
+  position: relative;
+  z-index: 1000;
 }
 
 #block-block-1 .col2 h3 {
@@ -317,6 +323,24 @@ body {
 
 #block-block-1 .col2 .step-3 .extra {
   border-bottom: none;
+}
+
+#block-block-1 .wildcard {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 44%;
+  cursor: pointer;
+  height: 200px;
+  background: url(../img/bg-wildcard.png) no-repeat center bottom;  
+  padding-bottom: 36px;
+  z-index: 100;
+}
+
+#block-block-1 .wildcard .content {
+  background: #e7e2d3 ;
+  height: 180px;
+  padding: 10px;
 }
 
 
@@ -367,6 +391,22 @@ body {
 #block-views-testimonials-block .right {
   width: 550px;
   float: left;
+}
+
+#block-views-testimonials-block .right .top-right {
+  line-height: 1.6;
+}
+
+#block-views-testimonials-block .right .top-right a {
+  float: right;
+  display: block;
+  padding: 2px 4px;
+  background: #a59f91;
+  color: #2b2e35;
+  text-decoration: none;
+  font-size: 0.846em;
+  position: relative;
+  font-weight: bold;
 }
 
 #block-views-testimonials-block .right .bottom-right {

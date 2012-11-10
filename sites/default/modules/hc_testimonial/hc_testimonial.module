@@ -74,10 +74,12 @@ function theme_views_view_field__testimonials__nothing(&$vars) {
 	$description = $node_wrapper->field_cfo_beschrijving->value();
 	$description_value = $description['value'];
 	$description_format = $description['format'];
+	$description_link = l(t('Read more'), 'node/' . $vars['row']->nid);
 	
-	$alter = array('max_length' => 250, 'ellipsis' => TRUE);
+	$alter = array('max_length' => 350, 'ellipsis' => TRUE);
 	
-	$description_output = views_trim_text($alter, check_markup($description_value, $description_format));
+	$description_output = views_trim_text($alter, check_markup($description_value, $description_format))
+	  . $description_link;
 
 	// TODO: custom text vertalen!
 

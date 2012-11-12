@@ -484,3 +484,29 @@ body {
 #zone-footer #block-views-sponsors-block, #zone-footer #block-views-sponsors-block ul {
   text-align: right;
 }
+
+/** Galerij **/
+.view-gallery ul {
+  list-style: none;
+}
+
+.view-gallery ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  height: 110px;
+  background: #e0dacc;
+  float: left;
+  margin-right: 19px;
+  margin-bottom: 16px;
+}
+
+.view-gallery ul li.last {
+  margin-right: 0;
+}
+
+.view-gallery ul li a {
+  display: block;
+  margin: 10px;
+}

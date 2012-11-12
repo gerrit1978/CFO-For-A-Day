@@ -14,5 +14,12 @@ jQuery(document).ready(function($) {
   });
 
 
-
+	// flexslider company navigation
+	$('.flexslider').flexslider({
+		animation: "slide",
+    animationLoop: false,
+    itemWidth: 150,
+    itemMargin: 6
+ 	});
+ 	
 });

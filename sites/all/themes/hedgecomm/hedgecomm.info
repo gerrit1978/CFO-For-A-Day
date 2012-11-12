@@ -26,7 +26,10 @@ regions[footer_first] = 'Footer First'
 regions[footer_second] = 'Footer Second'
 
 scripts[] = scripts/jquery.countdown.min.js
+scripts[] = flexslider/jquery.flexslider-min.js
 scripts[] = scripts/script.js
+
+stylesheets[all][] = flexslider/flexslider.css
 
 zones[header] = 'Header'
 zones[content] = 'Content'

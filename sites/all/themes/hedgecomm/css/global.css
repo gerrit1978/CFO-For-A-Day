@@ -439,12 +439,17 @@ body {
   margin-top: 100px;
 }
 
-.view-companies ul {
+#block-views-companies-block-1 .view-companies .flexslider {
+  width: 100%;
+  overflow: hidden;
+}
+
+#block-views-companies-block-1 .view-companies ul {
   margin: 0; 
   padding: 0;
 }
 
-.view-companies ul li {
+#block-views-companies-block-1 .view-companies ul li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -456,7 +461,11 @@ body {
   margin-bottom: 16px;
 }
 
-.view-companies ul li .logo {
+#block-views-companies-block-1 .view-companies ul li.last {
+  margin-right: 0;
+}
+
+#block-views-companies-block-1 .view-companies ul li .logo {
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -509,4 +518,33 @@ body {
 .view-gallery ul li a {
   display: block;
   margin: 10px;
+}
+
+
+/** Companies page **/
+.view-companies .flexslider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.view-companies ul.slides {
+  margin: 0; 
+  padding: 0;
+}
+
+.view-companies ul.slides li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  height: 160px;
+  background: #e0dacc;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.view-companies ul.slides li .logo {
+  margin-top: 10px;
+  margin-left: 10px;
 }

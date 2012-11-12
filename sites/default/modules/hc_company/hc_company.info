@@ -1,0 +1,6 @@
+name        = Companies
+description = Provides navigation and presentation ways for the "Companies" page
+core        = 7.x
+version     = 7.x-1.0
+
+package     = HedgeComm

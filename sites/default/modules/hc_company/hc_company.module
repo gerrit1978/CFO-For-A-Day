@@ -1,0 +1,10 @@
+<?php
+
+
+/**
+ * Implements hook_init
+ */
+function hc_company_init() {
+  $path = drupal_get_path('module', 'hc_company');
+  drupal_add_js($path . '/js/hc_company.js');
+}

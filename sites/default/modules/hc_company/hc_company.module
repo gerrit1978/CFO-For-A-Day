@@ -22,6 +22,12 @@ function hc_company_menu() {
     'access arguments' => array('access content'),
   );
   
+  $items['companies/%'] = array(
+    'title' => t('The 20 Companies'),
+    'page callback' => '_hc_company_dummy',
+    'access arguments' => array('access content'),
+  );
+  
   return $items;
 }
 
@@ -37,4 +43,12 @@ function _hc_company_render($nid) {
   print $output;
   exit();
 
+}
+
+
+/**
+ * Dummy rendering function
+ */
+function _hc_company_dummy() {
+  return "";
 }

@@ -8,3 +8,33 @@ function hc_company_init() {
   $path = drupal_get_path('module', 'hc_company');
   drupal_add_js($path . '/js/hc_company.js');
 }
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_company_menu() {
+  $items = array();
+  
+  $items['hc_company/%'] = array(
+    'page callback' => '_hc_company_render',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+  );
+  
+  return $items;
+}
+
+
+
+/** 
+ * Render the detail company
+ */
+function _hc_company_render($nid) {
+  $output = views_embed_view('companies', 'block_4', $nid);
+  
+
+  print $output;
+  exit();
+
+}

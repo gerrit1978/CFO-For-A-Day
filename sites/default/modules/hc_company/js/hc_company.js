@@ -5,6 +5,15 @@ jQuery(document).ready(function($) {
     var id = $(this).attr('id');
     var nid = id.replace("company-", "");
 
+    var url = Drupal.settings.basePath + "hc_company/" + nid;
+
+    $.get(url, function(data) {
+      $('.view-companies .detail ul li').fadeOut("fast", function() {
+        $('.view-companies .detail ul li').fadeIn("slow").html(data);
+      });
+    });
+
+
   });
 
 });

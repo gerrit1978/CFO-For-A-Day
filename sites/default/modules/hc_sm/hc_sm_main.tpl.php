@@ -1,9 +1,8 @@
-<ul>
-<li class="first">
 <div class="label">
-Deel op
+<?php print t('Laat je vrienden zien dat je deelneemt aan CFO for a day!'); ?>
 </div>
-</li>
+
+<ul>
 
 <li>
 <!-- Facebook Like Button BEGIN -->

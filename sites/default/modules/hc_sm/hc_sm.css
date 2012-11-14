@@ -1,10 +1,15 @@
 #block-hc-sm-hc-sm {
-  
+  float: right;  
+}
+
+#block-hc-sm-hc-sm .label {
+	margin-bottom: 10px;
 }
 
 #block-hc-sm-hc-sm ul {
   float: right;
   list-style: none;
+  margin-bottom: 0;
 }
 
 #block-hc-sm-hc-sm ul li {
@@ -15,4 +20,8 @@
 
 #block-hc-sm-hc-sm ul li.first {
   margin-right: 15px;
+}
+
+#block-hc-sm-hc-sm ul li.last {
+  margin: 0;
 }

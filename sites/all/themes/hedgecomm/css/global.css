@@ -697,6 +697,7 @@ form.webform-client-form #edit-actions .form-submit {
 }
 
 /** Companies page **/
+/** Flexslider **/
 .view-companies .flexslider {
   width: 100%;
   position: relative;
@@ -764,4 +765,55 @@ ul.flex-direction-nav li a.flex-next {
 
 ol.flex-control-nav {
   display: none;
+}
+
+/** Company content itself **/
+.view-companies ul li {
+  margin: 0;
+  background: url(../img/bg-company-top.png) repeat-x left top;
+	margin-bottom: 50px;
+}
+
+.view-companies ul li .node {
+  background: url(../img/bg-company-bottom.png) repeat-x left bottom;
+  padding: 40px;
+  padding-right: 0;
+}
+
+.view-companies ul li .node .field-name-field-company-logo {
+  float: right;
+  padding: 20px;
+	box-shadow: 0 0 4px #888;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.view-companies ul li .node h2.node-title {
+  text-transform: uppercase;
+  color: #2b2f35;
+  font-weight: lighter;
+  margin-top: 50px;
+  font-size: 3em;
+}
+
+.view-companies ul li .node .cfo .cfo-inner {
+  background: url(../img/bg-cfo-top.png) no-repeat center top;
+  padding-top: 24px;
+  margin: 40px 0;
+}
+
+.view-companies ul li .node .cfo .cfo-inner .cfo-visual {
+  width: 300px;
+  float: left;
+}
+
+.view-companies ul li .node .cfo .cfo-inner .cfo-name {
+  font-size: 2em;
+  color: #2b2f35;
+  margin-left: 320px;
+}
+
+.view-companies ul li .node .cfo .cfo-inner .cfo-description {
+  margin-left: 320px;
 }

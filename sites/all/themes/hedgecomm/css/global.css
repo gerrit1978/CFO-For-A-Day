@@ -628,3 +628,19 @@ form.webform-client-form #webform-component-mijn-voorkeurbedrijven .webform-comp
   width: 20%;
   float: left;
 }
+
+form.webform-client-form #edit-actions .form-submit {
+  float: right;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #2b2e35;
+  text-decoration: none;
+  padding: 6px 15px;
+  background: #d29f50;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0 0 10px #666;
+  text-transform: uppercase;
+}

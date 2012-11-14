@@ -472,21 +472,15 @@ body {
 
 
 /** Main page bg **/
-.not-front #block-system-main {
+.context-inschrijven #block-system-main {
   background: #dfdacc url(../img/bg-content-top.jpg) repeat-x left top;
   margin-bottom: 20px;
 }
 
-.not-front #block-system-main .block-inner {
+.context-inschrijven #block-system-main .block-inner {
   background: url(../img/bg-content-bottom.jpg) repeat-x left bottom; 
   padding: 30px;
 }
-
-.page-kandidaten #block-system-main, .page-kandidaten #block-system-main .block-inner {
-  background: none;
-  padding: 0;
-}
-
 
 /** Footer blocks **/
 #zone-footer .block-title {
@@ -536,36 +530,6 @@ body {
   display: block;
   margin: 10px;
 }
-
-
-/** Companies page **/
-.view-companies .flexslider {
-  width: 100%;
-  overflow: hidden;
-}
-
-.view-companies ul.slides {
-  margin: 0; 
-  padding: 0;
-}
-
-.view-companies ul.slides li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 175px;
-  height: 160px;
-  background: #e0dacc;
-  float: left;
-  margin-right: 16px;
-  margin-bottom: 16px;
-}
-
-.view-companies ul.slides li .logo {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
 
 /** Inschrijfpagina **/
 form.webform-client-form label {
@@ -730,4 +694,74 @@ form.webform-client-form #edit-actions .form-submit {
   right: 20px;
   bottom: 20px;
   font-size: 1.4em;
+}
+
+/** Companies page **/
+.view-companies .flexslider {
+  width: 100%;
+  position: relative;
+}
+
+.view-companies ul.slides {
+  margin: 0; 
+  padding: 0;
+}
+
+.view-companies ul.slides li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 175px;
+  height: 146px;
+  background: #e0dacc;
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.view-companies ul.slides li .info {
+  margin: 10px 0;
+}
+
+.view-companies ul.slides li .info .title {
+  position: absolute;
+  top: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.view-companies ul.slides li .info .logo {
+  margin: 35px 10px 0 10px;
+}
+
+.view-companies ul.slides li .info .title a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+
+ul.flex-direction-nav li a {
+  width: 52px;
+  height: 146px;
+  background: url(../img/navigatie-carrousel.png) no-repeat right top;
+  display: block;
+  text-indent: -999em;
+}
+
+ul.flex-direction-nav li a.flex-prev {
+  position: absolute;
+  left: -80px;
+  top: 0;
+}
+
+ul.flex-direction-nav li a.flex-next {
+  background-position: left bottom;
+  position: absolute;
+  right: -80px;
+  top: 0;
+}
+
+ol.flex-control-nav {
+  display: none;
 }

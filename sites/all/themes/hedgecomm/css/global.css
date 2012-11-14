@@ -471,6 +471,18 @@ body {
 }
 
 
+/** Main page bg **/
+#block-system-main {
+  background: #dfdacc url(../img/bg-content-top.jpg) repeat-x left top;
+  margin-bottom: 20px;
+}
+
+#block-system-main .block-inner {
+  background: url(../img/bg-content-bottom.jpg) repeat-x left bottom; 
+  padding: 30px;
+}
+
+
 /** Footer blocks **/
 #zone-footer .block-title {
   font-weight: 300;
@@ -547,4 +559,72 @@ body {
 .view-companies ul.slides li .logo {
   margin-top: 10px;
   margin-left: 10px;
+}
+
+
+/** Inschrijfpagina **/
+form.webform-client-form label {
+  font-weight: 300;
+}
+
+form.webform-client-form .webform-component {
+  clear: left;
+}
+
+form.webform-client-form .form-text {
+  background: #2d3037;
+  color: white;
+  border: none;
+}
+
+form.webform-client-form .form-file {
+  background: none;
+}
+
+form.webform-client-form #webform-component-personalia {
+  float: right;
+  width: 480px;
+}
+
+form.webform-client-form #webform-component-personalia label {
+  font-weight: 300;
+  width: 75px;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+}
+
+form.webform-client-form #webform-component-personalia .form-text {
+  width: 375px;
+}
+
+form.webform-client-form #webform-component-personalia .form-checkboxes label {
+  width: 365px;
+  text-align: left;	
+  margin: 0;
+  margin-left: 10px;
+}
+
+form.webform-client-form #webform-component-personalia .form-checkboxes .form-checkbox {
+  margin-right: 10px;
+  margin-left: 60px;
+  float: left;
+  clear: left;
+}
+
+form.webform-client-form #webform-component-mijn-voorkeurbedrijven {
+  clear: both;
+}
+
+form.webform-client-form legend {
+  font-size: 1.538em;
+}
+
+form.webform-client-form #webform-component-mijn-voorkeurbedrijven .webform-component {
+  clear: none;
+}
+
+form.webform-client-form #webform-component-mijn-voorkeurbedrijven .webform-component-select {
+  width: 20%;
+  float: left;
 }

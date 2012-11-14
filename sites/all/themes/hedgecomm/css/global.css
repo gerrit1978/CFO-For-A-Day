@@ -472,12 +472,12 @@ body {
 
 
 /** Main page bg **/
-#block-system-main {
+.not-front #block-system-main {
   background: #dfdacc url(../img/bg-content-top.jpg) repeat-x left top;
   margin-bottom: 20px;
 }
 
-#block-system-main .block-inner {
+.not-front #block-system-main .block-inner {
   background: url(../img/bg-content-bottom.jpg) repeat-x left bottom; 
   padding: 30px;
 }
@@ -633,7 +633,9 @@ form.webform-client-form #edit-actions .form-submit {
   float: right;
   margin: 0;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 2.077em;
+  font-weight: lighter;
+  font-family: "Ubuntu Condensed";
   color: #2b2e35;
   text-decoration: none;
   padding: 6px 15px;
@@ -643,4 +645,6 @@ form.webform-client-form #edit-actions .form-submit {
   -webkit-border-radius: 10px;
   box-shadow: 0 0 10px #666;
   text-transform: uppercase;
+  border: none;
+  text-shadow: none;
 }

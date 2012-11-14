@@ -303,6 +303,7 @@ function theme_webform_edit_file_extensions($variables) {
  * Implements _webform_render_component().
  */
 function _webform_render_file($component, $value = NULL, $filter = TRUE) {
+
   $node = isset($component['nid']) ? node_load($component['nid']) : NULL;
 
   // Cap the upload size according to the PHP limit.
@@ -339,6 +340,7 @@ function _webform_render_file($component, $value = NULL, $filter = TRUE) {
  * Implements _webform_submit_component().
  */
 function _webform_submit_file($component, $value) {
+
   if (is_array($value)) {
     return !empty($value['fid']) ? $value['fid'] : '';
   }
@@ -370,6 +372,7 @@ function webform_file_allow_access($element) {
  * Implements _webform_display_component().
  */
 function _webform_display_file($component, $value, $format = 'html') {
+
   $fid = isset($value[0]) ? $value[0] : NULL;
   return array(
     '#title' => $component['name'],

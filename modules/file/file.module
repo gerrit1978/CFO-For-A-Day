@@ -721,6 +721,7 @@ function file_managed_file_pre_render($element) {
  * @ingroup themeable
  */
 function theme_file_link($variables) {
+
   $file = $variables['file'];
   $icon_directory = $variables['icon_directory'];
 

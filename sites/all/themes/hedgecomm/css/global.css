@@ -482,6 +482,11 @@ body {
   padding: 30px;
 }
 
+.page-kandidaten #block-system-main, .page-kandidaten #block-system-main .block-inner {
+  background: none;
+  padding: 0;
+}
+
 
 /** Footer blocks **/
 #zone-footer .block-title {
@@ -647,4 +652,82 @@ form.webform-client-form #edit-actions .form-submit {
   text-transform: uppercase;
   border: none;
   text-shadow: none;
+}
+
+
+/** Kandidaten page **/
+.view-kandidaten ul {
+  list-style: none;
+  margin: 0;
+}
+
+.view-kandidaten ul li {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 380px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.view-kandidaten ul li.last {
+  margin-right: 0;
+}
+
+.view-kandidaten ul li .avatar {
+  width: 280px;
+  height: 380px;
+  background: #e9e7dd;
+}
+
+.view-kandidaten ul li .avatar img {
+  margin: 10px;
+}
+
+.view-kandidaten ul li .text {
+  position: absolute;
+  left: -4px; 
+  top: 250px;
+  background: url(../img/bg-kandidaat-overzicht.png) no-repeat left top;
+  width: 300px;
+  height: 121px;
+  color: white;
+}
+
+.view-kandidaten ul li .text a {
+  color: white;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-weight: bold;
+  font-family: "Ubuntu Condensed";
+  color: #2b2e35;
+  text-decoration: none;
+  padding: 4px 25px;
+  background: #d29f50;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0 0 10px #666;
+  border: none;
+  text-shadow: none;
+  font-size: 1.104em;
+}
+
+.view-kandidaten ul li .text .naam {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  font-size: 1.5em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.view-kandidaten ul li .text .results {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1.4em;
 }

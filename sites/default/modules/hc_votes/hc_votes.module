@@ -41,7 +41,17 @@ function _hc_votes_vote($nid) {
     }
   }
   
-  $url = url("kandidaten", array('absolute' => TRUE));
+  global $language;
+  
+  switch ($language->language) {
+    case 'nl':
+    default:
+		  $url = url("kandidaten", array('absolute' => TRUE));    
+		  break;
+		case 'fr':
+		  $url = url("candidats", array('absolute' => TRUE));    
+		  break;
+	  }
 
   drupal_set_message(t("Bedankt voor je stem.<br />Deze kandidaat heeft nu @stemmen stemmen.", array("@stemmen" => $aantal_stemmen)));
   drupal_goto($url);

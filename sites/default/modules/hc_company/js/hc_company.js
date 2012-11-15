@@ -10,7 +10,11 @@ jQuery(document).ready(function($) {
     $.get(url, function(data) {
       $('.view-companies .detail ul li').fadeOut("fast", function() {
         $('.view-companies .detail ul li').fadeIn("slow").html(data);
-      });
+
+				$('html,body').animate({
+					scrollTop: $('ul.slides').offset().top},
+					"fast");
+				});
     });
 
 		return false;

@@ -18,8 +18,9 @@ jQuery(document).ready(function($) {
 	$('.flexslider').flexslider({
 		animation: "slide",
     animationLoop: false,
-    itemWidth: 150,
-    itemMargin: 6
+    itemWidth: 183,
+    move: 2,
+    itemMargin: 5
  	});
  	
 });

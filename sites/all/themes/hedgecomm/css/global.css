@@ -712,15 +712,16 @@ form.webform-client-form #edit-actions .form-submit {
 
 .view-companies ul.slides li {
   list-style: none;
-  margin: 0;
+	margin-left: 0; 
+	margin-right: 5px;
+  background: #e0dacc;	
   padding: 0;
-  width: 175px;
+  margin-left: 0;
   height: 146px;
   background: #e0dacc;
-  float: left;
-  margin-right: 16px;
   margin-bottom: 16px;
   position: relative;
+  float: left;
 }
 
 .view-companies ul.slides li .info {
@@ -797,6 +798,10 @@ ol.flex-control-nav {
   font-weight: lighter;
   margin-top: 50px;
   font-size: 3em;
+}
+
+.view-companies ul li .node .cfo {
+  clear: right;
 }
 
 .view-companies ul li .node .cfo .cfo-inner {

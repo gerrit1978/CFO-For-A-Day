@@ -472,12 +472,14 @@ body {
 
 
 /** Main page bg **/
-.context-inschrijven #block-system-main {
+.context-inschrijven #block-system-main,
+.context-subscribe #block-system-main {
   background: #dfdacc url(../img/bg-content-top.jpg) repeat-x left top;
   margin-bottom: 20px;
 }
 
-.context-inschrijven #block-system-main .block-inner {
+.context-inschrijven #block-system-main .block-inner,
+.context-subscribe #block-system-main .block-inner {
   background: url(../img/bg-content-bottom.jpg) repeat-x left bottom; 
   padding: 30px;
 }
@@ -768,7 +770,7 @@ ol.flex-control-nav {
 }
 
 /** Company content itself **/
-.view-companies ul li {
+.view-companies ul li.item {
   margin: 0;
   background: url(../img/bg-company-top.png) repeat-x left top;
 	margin-bottom: 50px;

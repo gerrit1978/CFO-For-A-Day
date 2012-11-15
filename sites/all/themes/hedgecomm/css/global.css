@@ -700,6 +700,11 @@ form.webform-client-form #edit-actions .form-submit {
 
 /** Companies page **/
 /** Flexslider **/
+
+.flexslider .slides img {
+    width: auto !important;
+}
+
 .view-companies .flexslider {
   width: 100%;
   position: relative;
@@ -736,7 +741,7 @@ form.webform-client-form #edit-actions .form-submit {
 }
 
 .view-companies ul.slides li .info .logo {
-  margin: 35px 10px 0 10px;
+  margin: 35px 10px 0 25px;
 }
 
 .view-companies ul.slides li .info .title a {

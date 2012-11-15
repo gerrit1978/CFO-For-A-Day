@@ -37,8 +37,9 @@ function hc_company_menu() {
  * Render the detail company
  */
 function _hc_company_render($nid) {
-  $output = views_embed_view('companies', 'block_4', $nid);
-  
+//  $output = views_embed_view('companies', 'block_4', $nid);
+
+  $output = drupal_render(node_view(node_load($nid)));
 
   print $output;
   exit();

@@ -1,7 +1,7 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
 
-	<?php print render($content['field_company_logo']); ?>
+	<?php print render($content['image_with_link']); ?>
 
   <?php print render($title_prefix); ?>
     <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
@@ -18,6 +18,7 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+      hide($content['field_company_logo']);      
       hide($content['cfos']);
       print render($content);
     ?>

@@ -836,12 +836,4 @@ ol.flex-control-nav {
 /** RESPONSIVE STYLES **/
 @media screen and (max-device-width: 480px) {
 
-	body {
-	 font-family: Verdana;
-	}
-	
-	#block-views-carrousel-block {
-	  display: none;
-	}
-
 }

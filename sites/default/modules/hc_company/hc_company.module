@@ -23,7 +23,7 @@ function hc_company_menu() {
   );
   
   $items['companies/%'] = array(
-    'title' => t('The 20 Companies'),
+    'title' => t('Bedrijven'),
     'page callback' => '_hc_company_dummy',
     'access arguments' => array('access content'),
   );

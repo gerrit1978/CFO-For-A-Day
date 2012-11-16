@@ -829,3 +829,19 @@ ol.flex-control-nav {
 .view-companies ul li .node .cfo .cfo-inner .cfo-description {
   margin-left: 320px;
 }
+
+
+
+
+/** RESPONSIVE STYLES **/
+@media screen and (max-device-width: 480px) {
+
+	body {
+	 font-family: Verdana;
+	}
+	
+	#block-views-carrousel-block {
+	  display: none;
+	}
+
+}

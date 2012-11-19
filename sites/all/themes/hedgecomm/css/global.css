@@ -301,7 +301,7 @@ body {
 #block-block-1 .col2 .step .number {
   font-size: 4.769em;
   line-height: 1;
-  color: #e1dbcd;
+  color: #c6bfaf;
   width: 50px;
   float: left;
 }
@@ -328,7 +328,7 @@ body {
 #block-block-1 .wildcard {
   position: absolute;
   top: 150px;
-  right: 0;
+	right: 0;
   width: 44%;
   cursor: pointer;
   height: 200px;

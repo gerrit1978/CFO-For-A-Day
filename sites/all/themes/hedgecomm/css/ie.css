@@ -1,0 +1,12 @@
+#block-block-1 .col2 {
+  width: 43% !important;
+}
+
+#block-block-1 .col2 .step .extra {
+  margin-bottom: 0 !important;
+}
+
+#block-block-1 .wildcard {
+	right: 8px !important;
+  width: 43% !important;
+}

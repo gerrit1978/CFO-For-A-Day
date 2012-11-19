@@ -90,9 +90,11 @@ function hc_twitter_block_hc_twitter_render() {
   $tweets = array();
   if (is_array($results)) {
     for ($i = 0; $i < variable_get('hc_twitter_number', 2); $i++) {
-      $text = $results[$i]->text;
-      $user = $results[$i]->from_user;
-      $tweets[] = array('text' => $text, 'user' => $user);
+      if (isset($results[$i])) {
+	      $text = $results[$i]->text;
+	      $user = $results[$i]->from_user;
+	      $tweets[] = array('text' => $text, 'user' => $user);
+	    }
     }
   }
   

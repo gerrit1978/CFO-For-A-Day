@@ -339,8 +339,8 @@ body {
 
 #block-block-1 .wildcard .content {
   background: #e7e2d3 ;
-  height: 180px;
-  padding: 10px;
+  height: 150px;
+  padding: 25px;
 }
 
 
@@ -506,6 +506,13 @@ body {
 #zone-footer #block-views-sponsors-block, #zone-footer #block-views-sponsors-block ul {
   text-align: right;
 }
+
+/** Sponsors **/
+.view-sponsors li {
+  margin : 0;
+  float: right;
+}
+
 
 /** Galerij **/
 .view-gallery ul {

@@ -64,7 +64,10 @@ function hc_kandidaat_webform_submission_insert($node, $submission) {
 	
 	
 	$ew->field_kandidaat_webform_sid->set($sid); // Webform submission id
-	$ew->status->set(0); // Unpublished
+	$ew->field_kandidaat_notificatie->set(0); // Kandidaat nog niet op de hoogte brengen dat hij/zij verdergaat	
+	
+	$ew->status->set(1); // Published	
+//	$ew->status->set(0); // Unpublished
 	$ew->language->set($language->language); // Language
 
 	// Save the node	
